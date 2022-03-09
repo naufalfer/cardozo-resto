@@ -1,0 +1,122 @@
+.posts {
+    display: grid;
+    grid-row-gap: 16px;
+}
+
+#hamburger, .offcanvasonhp {
+    display: none;
+}
+
+@media screen and (max-width: 499px) {
+    .nav {
+        z-index: 10;
+        background-color: #307672;
+        width: 100%;
+        position: absolute;
+
+        /* This trasform moves the drawer off canvas. */
+        -webkit-transform: translate(-500px, 0);
+        transform: translate(-500px, 0);
+
+        /* Optionally, we animate the drawer. */
+        transition: transform 0.3s ease;
+    }
+
+    .nav__title {
+        display: none;
+    }
+
+    .nav__item {
+        text-align: center;
+    }
+
+    .open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+
+    #hamburger {
+        display: block;
+        background-color: #307672;
+        padding: 20px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .offcanvasonhp {
+        display: block;
+        text-align: center;
+        padding: 15px;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: white;
+        font-family: "Goblin One", sans-serif;
+    }
+
+    .hero {
+    background-image: url("/images/hero-image_4-small.jpg");
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .header__menu {
+        display: none;
+    }
+
+    .nav__list {
+        display: grid;
+        grid-template-columns: 3fr 1fr 1fr 1fr;
+    }
+
+    .hero {
+        background-image: url("/images/hero-image_4-large.jpg");
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .posts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 16px;
+    }
+
+    .post-item {
+        margin: 16px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        /* width: 100%; */
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .hero {
+        background-image: url("/images/hero-image_4-large.jpg");
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .headline {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .posts {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .hero {
+        background-image: url("/images/hero-image_4-large.jpg");
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    main {
+        max-width: 1200px;
+    }
+
+    .hero {
+        background-image: url("/images/hero-image_4-large.jpg");
+    }
+}

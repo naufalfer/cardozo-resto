@@ -1,0 +1,19 @@
+/*
+Footer
+*/
+
+.footer {
+    color: white;
+    text-align: center;
+    background-color: #1a3c40;
+    padding: 25px;
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    list-style-type: none;
+}
